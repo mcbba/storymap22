@@ -450,6 +450,7 @@ $(window).on('load', function() {
     for (i in markers) {
       if (markers[i]) {
         markers[i].addTo(map);
+	markers[i].bindTooltip("Pins do not represent bird locations");
         markers[i]['_pixelsAbove'] = pixelsAbove[i];
         markers[i].on('click', function() {
           var pixels = parseInt($(this)[0]['_pixelsAbove']) + 5;
