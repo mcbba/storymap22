@@ -102,7 +102,7 @@ $(window).on('load', function() {
 
 		function onEachFeature(feature, layer) {
 
-  			var att = json.properties;
+  			var att = geojson.properties;
   			lyr.bindTooltip("<b>" + att.block + "</b>", {
   				sticky: true
   			});
