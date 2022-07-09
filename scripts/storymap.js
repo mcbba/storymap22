@@ -88,46 +88,46 @@ $(window).on('load', function() {
       maxZoom: 14
     }).addTo(map);
     //making changes here
-    var lyrGrid = L.geoJSON.ajax('src/grid.geojson', {
-  				style: styleGrid,
-  				onEachFeature: processGrid
-  			}).addTo(map);
-    function styleGrid(json) {
-  			var att = json.properties;
-  			switch(att.name) {
-  				case 'C':
-  					return {
-  						color: 'black',
-  						fillOpacity: 0.5
-  					};
-  					break;
-  				case 'S':
-  					return {
-  						color: 'black',
-  						fillOpacity: 0.5
-  					};
-  					break;
-  				case 'E':
-  					return {
-  						color: 'black',
-  						fillOpacity: 0.5
-  					};
-  					break;
+//     var lyrGrid = L.geoJSON.ajax('src/grid.geojson', {
+//   				style: styleGrid,
+//   				onEachFeature: processGrid
+//   			}).addTo(map);
+//     function styleGrid(json) {
+//   			var att = json.properties;
+//   			switch(att.name) {
+//   				case 'C':
+//   					return {
+//   						color: 'black',
+//   						fillOpacity: 0.5
+//   					};
+//   					break;
+//   				case 'S':
+//   					return {
+//   						color: 'black',
+//   						fillOpacity: 0.5
+//   					};
+//   					break;
+//   				case 'E':
+//   					return {
+//   						color: 'black',
+//   						fillOpacity: 0.5
+//   					};
+//   					break;
     
-  				default:
-  					return {
-  						color: 'red',
-  						fillOpacity: 0
-  					}
-  			}
-  		}
+//   				default:
+//   					return {
+//   						color: 'red',
+//   						fillOpacity: 0
+//   					}
+//   			}
+//   		}
   
-  		function processGrid(json, lyr) {
-  			var att = json.properties;
-  			lyr.bindTooltip("<b>" + att.name + "</b>", {
-  				sticky: true
-  			});
-  		}
+//   		function processGrid(json, lyr) {
+//   			var att = json.properties;
+//   			lyr.bindTooltip("<b>" + att.name + "</b>", {
+//   				sticky: true
+//   			});
+//   		}
   }
 
   function initMap(options, chapters) {
