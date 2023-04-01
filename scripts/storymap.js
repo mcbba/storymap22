@@ -84,10 +84,9 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
  
-	L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
-		attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		apikey: 'db5ae1f5778a448ca662554581f283c5',
-		maxZoom: 22
+	L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+		maxZoom: 16
 	}).addTo(map);
 
 	L.tileLayer('tiles/{z}/{x}/{y}.png', {
